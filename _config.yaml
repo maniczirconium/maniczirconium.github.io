@@ -1,0 +1,42 @@
+title: "Antares Programming"
+description: "Dedicated to serving easily-accessible Web development learning materials for Filipinos"
+permalink: /blog/:title/
+theme-color: "#FF9500"
+gravatar: aeec9ba19ac358be11a053ffcafac8f1
+author: Francis Rubio
+
+facebook: antaresprogramming
+mastodon: 
+reddit: 
+twitter: antaresphdev
+
+authors:
+  teacherbuknoy:
+    name: Francis Rubio
+    description: "Web Developer and Educator from the Philippines"
+    gravatar: 2dc37e96621279e556480e63b75b58dc # Gravatar md5 hash
+  anonymous:
+    name: "Unknown Author"
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+paginate: 7
+paginate_path: "/archive/:num/"
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+future: false # Allows us to stage posts
+exclude: [README.md, Gemfile, Gemfile.lock, vendor, create-new-post]
+
+collections:
+  courses:
+    output: true

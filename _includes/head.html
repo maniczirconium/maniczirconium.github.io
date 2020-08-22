@@ -1,0 +1,60 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% if page.title %}{{ page.title }} &sdot; {% endif %}{{ site.title }}</title>
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=LbzXEqQbXJ">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=LbzXEqQbXJ">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=LbzXEqQbXJ">
+  <link rel="manifest" href="/site.webmanifest?v=LbzXEqQbXJ">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=LbzXEqQbXJ" color="#ffdd00">
+  <link rel="shortcut icon" href="/favicon.ico?v=LbzXEqQbXJ">
+  <meta name="apple-mobile-web-app-title" content="Antares Programming">
+  <meta name="application-name" content="Antares Programming">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="alternate" type="application/rss+xml" title="Antares Programming Blog" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author }}{% endif %}" />
+  <meta name="theme-color" content="{% if page.theme-color %}{{ page.theme-color }}{% else %}{{ site.theme-color }}{% endif %}" />
+ 
+
+  {% if page.image %}
+    {% assign prefix = page.image | slice: 0, 4 %}
+    {% if prefix == "http" %}
+      {% assign image = page.image %}
+    {% else %}
+      {% assign image = page.image | prepend: site.baseurl | prepend: site.url %}
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="{{ image }}" />
+  {% else %}
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:image" content="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=blank" />
+  {% endif %}
+  <meta name="twitter:site" content="@{{ site.twitter }}" />
+  <meta name="twitter:creator" content="@{{ site.twitter }}" />
+
+{% if page.description %}
+    {% assign lead = page.description %}
+{% elsif page.summary %}
+    {% assign lead = page.summary %}
+{% else %}
+    {% assign lead = site.description %}
+{% endif %}
+  <meta name="description" content="{{ lead }}" />
+  <meta property="og:description" content="{{ lead }}" />
+  <meta itemprop="description" content="{{ lead }}" />
+  <meta name="twitter:description" content="{{ lead }}" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="{{ '/css/fonts.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{ '/css/main.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
+    <link rel="stylesheet" type="text/css" media="print" href="{{ '/css/print.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
+</head>
