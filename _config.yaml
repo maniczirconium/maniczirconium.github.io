@@ -1,14 +1,14 @@
-title: "Antares Programming"
-description: "Dedicated to serving easily-accessible Web development learning materials for Filipinos"
+title: "Francis Rubio &middot; Official Website"
+description: "A Web designer, developer, educator, and writer from the Philippines."
 permalink: /blog/:title/
 theme-color: "#FF9500"
 gravatar: aeec9ba19ac358be11a053ffcafac8f1
 author: Francis Rubio
 
-facebook: antaresprogramming
+facebook: teacherbuknoyofficial
 mastodon: 
-reddit: 
-twitter: antaresphdev
+reddit: flr1999
+twitter: teacherbuknoy
 
 authors:
   teacherbuknoy:
@@ -19,7 +19,7 @@ authors:
     name: "Unknown Author"
 
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
@@ -36,7 +36,3 @@ kramdown:
 
 future: false # Allows us to stage posts
 exclude: [README.md, Gemfile, Gemfile.lock, vendor, create-new-post]
-
-collections:
-  courses:
-    output: true
