@@ -1,0 +1,46 @@
+{% if(page.title) %}
+  {% assign title = page.title %}
+{% else %}
+  {% assign title = site.title %}
+{% endif %}
+
+{% if(page.description) %}
+  {% assign desc = page.description %}
+{% elsif(page.summary) %}
+  {% assign desc = page.summary %}
+{% else %}
+  {% assign desc = site.description %}
+{% endif %}
+
+{% if(page.lang) %}
+  {% assign lang = page.lang %}
+{% else %}
+  {% assign lang = site.lang %}
+{% endif %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ desc }}">
+  
+  <!-- Facebook Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ desc }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="{{ lang }}">
+{% if(page.image) %}
+  <meta property="og:image" content="{{ page.image }}">
+{% endif %}
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.twitter }}">
+  <meta name="twitter:creator" content="@{{ site.twitter }}">
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ desc }}">
+{% if(page.image) %}
+  <meta name="twitter:image" content="{{ page.image }}">
+{% endif %}
+</head>
