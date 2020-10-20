@@ -1,0 +1,27 @@
+/*=== COLORS ===*/
+
+:root {
+  /* Theme Colors */
+  --f-red: #F94144;
+  --f-orange: #F3722C;
+  --f-yellow: #F9C74F;
+  --f-ponkan: #F3722C;
+  --f-green: #90BE6D;
+  --f-teal: #43AA8B;
+  --f-indigo: #577590;
+
+  /* Text Colors */
+  --fg-color: #000;
+  --body-color: #212121;
+
+  --bg-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg-color: #fff;
+    --body-color: #ddd;
+
+    --bg-color: #212121;
+  }
+}
