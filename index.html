@@ -3,10 +3,10 @@ layout: default
 ---
 
 {% include nav.html %}
-
+  
 <main class="page page--home">
   <header class="page__banner">
-    <p>I develop <span class="highlighted">robust</span> and <span class="highlighted">accessible</span> front ends on the Web.</p>
+    <p>I develop <span class="highlighted" style="--highlightIndex: 3">robust</span> and <span class="highlighted" style="--highlightIndex: 4">accessible</span> front ends on the Web.</p>
     <div class="banner-actions">
       <a href="#!" class="btn">Learn more</a>
       <a href="#!" class="btn btn--cta">Bring me to your team</a>
@@ -122,3 +122,8 @@ layout: default
     </ul>
   </section>
 </main>
+
+<script>
+  const highlights = document.querySelectorAll('.highlighted') 
+  highlights.forEach(word => word.classList.add('with-color'))
+</script>
