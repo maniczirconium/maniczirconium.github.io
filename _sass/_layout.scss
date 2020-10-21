@@ -1,42 +1,42 @@
 
 .page {
   .page__banner {
-    display : grid;
+    display: grid;
 
-    width   : 90%;
-    margin  : auto;
+    width: 90%;
+    margin: auto;
 
     p {
-      font-size   : 5rem;
-      font-weight : 500;
-      line-height : 1.25;
-      text-indent : 0;
+      font-size: 5rem;
+      font-weight: 500;
+      line-height: 1.25;
+      text-indent: 0;
     }
     .banner-actions {
-      display     : flex;
+      display: flex;
 
-      margin-left : auto;
+      margin-left: auto;
 
-      gap         : 2rem;
+      gap: 2rem;
     }
   }
   .page__section {
-    display    : grid;
-    min-height : 100vh;
+    display: grid;
+    min-height: 100vh;
   }
 }
 .highlighted {
-  padding             : 0 1rem;
+  padding: 0 1rem;
 
-  background-image    : linear-gradient(var(--f-teal), var(--f-teal));
-  background-position : center left;
-  background-repeat   : no-repeat;
-  background-size     : 0% 100%;
+  background-image: linear-gradient(var(--f-teal), var(--f-teal));
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
 
-  transition          : background-size 500ms ease-in;
-  transition-delay    : calc(300ms * var(--highlightIndex));
+  transition: background-size 500ms ease-in;
+  transition-delay: calc(300ms * var(--highlightIndex));
 
   &.with-color {
-    background-size : 100% 100%;
+    background-size: 100% 100%;
   }
 }
