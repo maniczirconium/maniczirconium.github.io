@@ -11,20 +11,84 @@
       font-weight: 500;
       line-height: 1.25;
       text-indent: 0;
+      margin: 3rem auto;
     }
     .banner-actions {
       display: flex;
-
       margin-left: auto;
-
       gap: 2rem;
+      padding: 2rem 0;
     }
   }
   .page__section {
     display: grid;
+    grid-template-rows: 30vh 1fr;
     min-height: 100vh;
+    border-top: 1px solid black;
+
+    &.page__section--longform {
+      font-size: 1.2em;
+      grid-template-rows: 30vh min-content;
+      padding-bottom: 2rem;
+      position: relative;
+
+      img.displayed-image {
+        float: right;
+        width: 50%;
+        shape-outside: url('/images/francis-rubio-transparency-mask.png');
+        shape-margin: 1rem;
+      }
+
+      ul, p {
+        font-family: var(--sans);
+        margin: auto;
+      }
+
+      * + * {
+        margin-top: 1rem !important;
+      }
+
+      p {
+        width: 60ch;
+      }
+
+      ul {
+        width: 55ch;
+      }
+    }
+
+    &.page__section--footer {
+      min-height: auto;
+      padding-bottom: 8rem;
+    }
+
+    & > header {
+      padding: 2rem 0;
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+
+      h2 {
+        flex: 1;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+    }
+
+    .card-flex {
+      border-top: 1px solid black;
+
+      .card {
+      }
+
+      .card:first-child {
+        border-right: 1px solid black;
+      }
+    }
   }
 }
+
 .highlighted {
   padding: 0 1rem;
 
@@ -38,5 +102,221 @@
 
   &.with-color {
     background-size: 100% 100%;
+  }
+}
+
+.card-flex {
+  display: flex;
+
+  .card {
+    flex: 1;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 1rem 1fr auto;
+
+  &.card--empty {
+    grid-template-rows: 1fr;
+    align-items: end;
+    padding: 2rem;
+
+    p {
+      color: #000a;
+      font-size: 3rem;
+      font-size: clamp(2rem, 3vw, 3rem);
+      text-indent: 0;
+      margin: 0;
+    }
+  }
+
+  &.card--cta {
+    grid-template-rows: 1fr auto auto auto;
+
+    & > * {
+      margin-right: 5vw;
+      margin-left: 2rem;
+    }
+
+    h3 {
+      font-size: 3rem;
+      font-weight: normal;
+      grid-row: 2/3;
+    }
+
+    p {
+      text-indent: 0;
+      grid-row: 3/4;
+    }
+
+    .btn {
+      grid-row: 4/5;
+      margin-bottom: 2rem;
+      justify-self: end;
+    }
+  }
+
+  &.card--image {
+    grid-template-rows: 1fr auto;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  &:first-child {
+    header, .card__body {
+      padding-left: 5vw;
+    }
+  }
+
+  &:last-child {
+    header, .card__body {
+      padding-right: 5vw;
+    }
+  }
+
+  footer {
+    grid-row: 1/2;
+    padding: 2rem;
+    text-align: right;
+  }
+
+  header, .card__body {
+    padding: 2rem;
+  }
+
+  header {
+    display: grid;
+    padding-bottom: 0;
+    align-self: end;
+
+    h3, h4 {
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 3rem;
+      font-weight: normal;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        background-size: 0;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    h4 {
+      grid-row: 1/2;
+      font-weight: normal;
+      text-transform: uppercase;
+      align-self: end;
+    }
+  }
+
+  .card__body {
+    padding-bottom: 2rem;
+
+    p {
+      margin: 0;
+      text-indent: 0;
+    }
+  }
+}
+
+.page__section {
+  position: relative;
+  overflow: hidden;
+
+
+  &::before, &::after {
+    content: '';
+    width: calc(var(--circle-size) / 1.5);
+    height: calc(var(--circle-size) / 1.5);
+    border-radius: 100%;
+    background-color: #0003;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    transition: transform 300ms;
+
+    background-image: linear-gradient(-45deg, var(--f-red), var(--f-yellow));
+    top: calc(var(--circle-size) / 4);
+    right: calc(var(--circle-size) / 4 * -1);
+
+    animation: beforeAnim 10s infinite;
+  }
+
+  &::after {
+    width: calc(var(--circle-size) / 2);
+    height: calc(var(--circle-size) / 2);
+    background-image: linear-gradient(175deg, var(--f-teal), var(--f-indigo));
+    top: unset;
+    bottom: calc(var(--circle-size) / 7);
+    right: unset;
+    left: calc((var(--circle-size) / 7) * -1);
+  }
+
+  &:nth-child(2n) {
+    &::before {
+      animation-delay: 1s;
+      animation-direction: reverse;
+    }
+
+    &::after {
+      animation-delay: 1.4s;
+      animation-duration: 15s
+    }
+  }
+
+  &:nth-child(3n) {
+    &::before {
+      animation-delay: 1.5s;
+      animation-direction: alternate-reverse;
+    }
+
+    &::after {
+      animation-delay: 1s;
+      animation-duration: 12s
+    }
+  }
+
+  &:nth-child(5n) {
+    &::before {
+      animation-delay: 1.25s;
+      animation-direction: reverse;
+    }
+
+    &::after {
+      animation-delay: 0.4s;
+      animation-duration: 25s
+    }
+  }
+}
+
+
+@keyframes beforeAnim{
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  20% {
+    transform:  translate(13px,5px)  ;
+  }
+  41% {
+    transform:  translate(-10px,-24px)  ;
+  }
+  60% {
+    transform:  translate(-10px,-8px)  ;
+  }
+  80% {
+    transform:  translate(-10px,8px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
   }
 }

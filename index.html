@@ -13,7 +13,59 @@ layout: default
     </div>
   </header>
 
-  <section class="page__section">
+  {% assign min = 50 %}
+  {% assign max = 75 %}
+  {% assign diff = max | minus: min %}
+  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <section class="page__section page__section--longform" style="--circle-size: {{ randomNumber }}vw">
+    <header>
+      <h2>What I can do for you</h2>
+    </header>
+    <div class="page__section__body">
+
+      <img class="displayed-image" width="500" height="500"
+      sizes="(max-width: 2209px) 100vw, 2209px"
+      srcset="
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_140.png 140w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_409.png 409w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_587.png 587w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_730.png 730w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_864.png 864w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_986.png 986w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1097.png 1097w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1203.png 1203w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1304.png 1304w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1410.png 1410w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1494.png 1494w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1584.png 1584w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1671.png 1671w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1756.png 1756w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1840.png 1840w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1924.png 1924w,
+      {{ site.url }}/images/francis-rubio_votrgs/ francis-rubio_votrgs_c_scale,w_2007.png 2007w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_2084.png 2084w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_2164.png 2164w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_2209.png 2209w"
+      src="{{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_2209.png"
+      alt="">
+
+
+      <p>I am a web developer, designer, and educator from the Philippines. I specialize in creating front ends for web projects and integrating them with <abbr title="Application Programming Interface">API</abbr>s and back end processes. I also design web experiences with particular attention to making them accessible and robust. The projects I work on are not just responsive but also light and resilient even on older devices.</p>
+      <p>Here are some of the things I can do for you:</p>
+      <ul>
+        <li>Create reusable responsive layouts using CSS</li>
+        <li>Use the newest technology on the web but also make your site still work on older browsers</li>
+        <li>Create lightweight front end interfaces for your back end service or <abbr title="Application Programming Interface">API</abbr></li>
+        <li>Translate your designs into actual working code</li>
+        <li>Design a site for your business needs.</li>
+      </ul>
+
+      <p>If this sounds good to you, you can email me at <a href="mailto:devFrancisRubio@gmail.com">devFrancisRubio@gmail.com</a>. We can talk and arrange for things if you want to hire me as a freelance developer or a member of your team.</p>
+    </div>
+  </section>
+
+  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <section class="page__section" style="--circle-size: {{ randomNumber }}vw">
     <header>
       <h2>Writing</h2>
       <a href="#!" class="btn">See all</a>
@@ -39,7 +91,8 @@ layout: default
     </div>
   </section>
 
-  <section class="page__section">
+  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <section class="page__section" style="--circle-size: {{ randomNumber }}vw">
     <header>
       <h2>Speaking</h2>
       <a href="#!" class="btn">See all</a>
@@ -74,50 +127,46 @@ layout: default
     </header>
     <div class="card-flex">
 
-      <article class="card">
+      <article class="card card--image">
         <header>
-          <img src="#!" alt="Antares Programming logo" width="1080" height="1080">
-          <h3 class="card__title"><a href="#!">Antares Programming</a></h3>
+          <img src="{{ site.url }}/images/logomark.svg" alt="Antares Programming logo" width="1080" height="1080">
+          <h3 class="card__title"><a href="{{ site.url }}/projects/antares-programming/">Antares Programming</a></h3>
         </header>
         <div class="card__body">
           <p>A project dedicated to provide educational materials for Filipino Web developers.</p>
         </div>
       </article>
       
-      <div class="card">
-
-      </div>
+      <article class="card card--image">
+        <header>
+          <img src="#!" alt="Quantarks logo" width="1080" height="1080">
+          <h3 class="card__title"><a href="{{ site.url }}/projects/quantarks/">Quantarks</a></h3>
+        </header>
+        <div class="card__body">
+          <p>An augmented reality app for Android devices that serves interactive representations of elements in the periodic table.</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="page__section">
+  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <section class="page__section page__section--longform page__section--footer" style="--circle-size: {{ randomNumber }}vw">
     <header>
       <h2>Contact</h2>
     </header>
+    <p>You can reach me on these channels of communication:</p>
     <ul>
       <li>
-        <a href="mailto:devFrancisRubio@gmail.com">
-          <img src="#!" alt="Gmail" width="300" height="300">
-          devFrancisRubio@gmail.com
-        </a>
+        <span class="bold">Email:</span>
+        <a href="mailto:devFrancisRubio@gmail.com">devFrancisRubio@gmail.com</a>
       </li>
       <li>
-        <a href="https://facebook.com/teacherbuknoyofficial">
-          <img src="#!" alt="Facebook" width="300" height="300">
-          teacherbuknoyofficial
-        </a>
+        <span class="bold">Github:</span>
+        <a href="https://github.com/maniczirconum" target="_blank" rel="noopener">maniczirconium</a>
       </li>
       <li>
-        <a href="https://twitter.com/teacherbuknoy">
-          <img src="#!" alt="Twitter" width="300" height="300">
-          teacherbuknoy
-        </a>
-      </li>
-      <li>
-        <a href="https://instagram.com/teacherbuknoyofficial">
-          <img src="#!" alt="Instagram" width="300" height="300">
-          teacherbuknoyofficial
-        </a>
+        <span class="bold">LinkedIn</span>
+        <a href="www.linkedin.com/in/francis-rubio" target="_blank" rel="noopener">Francis Rubio</a>
       </li>
     </ul>
   </section>
