@@ -1,0 +1,180 @@
+---
+layout: default
+---
+
+{% include nav.html %}
+  
+<main class="page page--home">
+  <header class="page__banner">
+    <p>I develop <span class="highlighted" style="--highlightIndex: 3">robust</span> and <span class="highlighted" style="--highlightIndex: 4">accessible</span> front ends on the Web.</p>
+    <div class="banner-actions">
+      <a href="#!" class="btn">Learn more</a>
+      <a href="/hire-me/" class="btn btn--cta">Bring me to your team</a>
+    </div>
+  </header>
+
+  {% assign min = 50 %}
+  {% assign max = 75 %}
+  {% assign diff = max | minus: min %}
+  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <section class="page__section page__section--longform" style="--circle-size: {{ randomNumber }}vw">
+    <header>
+      <h2>What I can do for you</h2>
+    </header>
+    <div class="page__section__body">
+
+      <img class="displayed-image" width="500" height="500"
+      sizes="(max-width: 2209px) 100vw, 2209px"
+      srcset="
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_140.png 140w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_409.png 409w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_587.png 587w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_730.png 730w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_864.png 864w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_986.png 986w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1097.png 1097w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1203.png 1203w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1304.png 1304w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1410.png 1410w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1494.png 1494w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1584.png 1584w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1671.png 1671w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1756.png 1756w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1840.png 1840w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_1924.png 1924w,
+      {{ site.url }}/images/francis-rubio_votrgs/ francis-rubio_votrgs_c_scale,w_2007.png 2007w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_2084.png 2084w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_2164.png 2164w,
+      {{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_2209.png 2209w"
+      src="{{ site.url }}/images/francis-rubio_votrgs/francis-rubio_votrgs_c_scale,w_2209.png"
+      alt="">
+
+
+      <p>I am a web developer, designer, and educator from the Philippines. I specialize in creating front ends for web projects and integrating them with <abbr title="Application Programming Interface">API</abbr>s and back end processes. I also design web experiences with particular attention to making them accessible and robust. The projects I work on are not just responsive but also light and resilient even on older devices.</p>
+      <p>Here are some of the things I can do for you:</p>
+      <ul>
+        <li>Create reusable responsive layouts using CSS</li>
+        <li>Use the newest technology on the web but also make your site still work on older browsers</li>
+        <li>Create lightweight front end interfaces for your back end service or <abbr title="Application Programming Interface">API</abbr></li>
+        <li>Translate your designs into actual working code</li>
+        <li>Design a site for your business needs.</li>
+        <li>Make your site accessible and compliant to the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer nofollow"><abbr title="W3C Content Accessibility Guidelines">WCAG</abbr>.</a></li>
+      </ul>
+
+      <p>If this sounds good to you, you can email me at <a href="mailto:devFrancisRubio@gmail.com">devFrancisRubio@gmail.com</a>. We can talk and arrange for things if you want to hire me as a freelance developer or a member of your team.</p>
+    </div>
+  </section>
+
+  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <section class="page__section" style="--circle-size: {{ randomNumber }}vw">
+    <header>
+      <h2>Writing</h2>
+      <a href="/writing/" class="btn">See all</a>
+    </header>
+    <div class="card-flex">
+      {% assign post1 = site.posts[0] %}
+      <article class="card">
+        <header>
+          <h3 class="card__title"><a href="{{ post1.url }}">{{ post1.title }}</a></h3>
+          <h4 class="card__category">{{ post1.category }}</h4>
+        </header>
+        <div class="card__body">
+          <p>{{ post1.description }}</p>
+        </div>
+        <footer>
+          <time aria-label="Date published" class="card__pubdate" datetime="{{ post1.date | date: "%F" }}">{{ post1.date | date: "%b-%d-%Y" }}</time>
+        </footer>
+      </article>
+
+      <article class="card card--empty">
+        <p>More articles soon</p>
+      </article>
+    </div>
+  </section>
+
+  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <section class="page__section" style="--circle-size: {{ randomNumber }}vw">
+    <header>
+      <h2>Speaking</h2>
+      <a href="/speaking/" class="btn">See all</a>
+    </header>
+    <div class="card-flex">
+
+      <article class="card">
+        <header>
+          <h3 class="card__title"><a href="/speaking/js-essentials/">Looking at a future with JavaScript</a></h3>
+          <h4 class="card__category">Web development</h4>
+        </header>
+        <div class="card__body">
+          <p>A talk I did for AMA Computer College Caloocan City Developer Students Club. I talked about the basics of JavaScript.</p>
+        </div>
+        <footer>
+          <time class="card__pubdate">OCT-5-2020</time>
+        </footer>
+      </article>
+
+      <article class="card card--cta">
+        <h3>Need a guest speaker?</h3>
+        <p>I have a few topics I can talk about. For inquiries, please send me an <a href="mailto:devFrancisRubio@gmail.com">e-mail</a> or slide into my DMs.</p>
+        <a href="/speaking/" class="btn">Learn more</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="page__section">
+    <header>
+      <h2>Projects</h2>
+      <a href="/projects/" class="btn">See all</a>
+    </header>
+    <div class="card-flex">
+
+      <article class="card card--image">
+        <header>
+          <img src="{{ site.url }}/images/logomark.svg" alt="Antares Programming logo" width="1080" height="1080">
+          <h3 class="card__title"><a href="{{ site.url }}/projects/antares-programming/">Antares Programming</a></h3>
+        </header>
+        <div class="card__body">
+          <p>A project dedicated to provide educational materials for Filipino Web developers.</p>
+        </div>
+      </article>
+      
+      <article class="card card--image">
+        <header>
+          <img src="#!" alt="Quantarks logo" width="1080" height="1080">
+          <h3 class="card__title"><a href="{{ site.url }}/projects/quantarks/">Quantarks</a></h3>
+        </header>
+        <div class="card__body">
+          <p>An augmented reality app for Android devices that serves interactive representations of elements in the periodic table.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <section class="page__section page__section--longform page__section--footer" style="--circle-size: {{ randomNumber }}vw">
+    <header>
+      <h2>Contact</h2>
+    </header>
+    <p>You can reach me on these channels of communication:</p>
+    <ul>
+      <li>
+        <span class="bold">Email:</span>
+        <a href="mailto:devFrancisRubio@gmail.com">devFrancisRubio@gmail.com</a>
+      </li>
+      <li>
+        <span class="bold">Github:</span>
+        <a href="https://github.com/maniczirconum" target="_blank" rel="noopener">maniczirconium</a>
+      </li>
+      <li>
+        <span class="bold">LinkedIn</span>
+        <a href="www.linkedin.com/in/francis-rubio" target="_blank" rel="noopener">Francis Rubio</a>
+      </li>
+    </ul>
+    <p>You can also visit my <a href="/about/">About</a> page for more information.</p>
+  </section>
+</main>
+{% include footer.html %}
+<script>
+  const highlights = document.querySelectorAll('.highlighted') 
+  highlights.forEach(word => word.classList.add('with-color'))
+</script>

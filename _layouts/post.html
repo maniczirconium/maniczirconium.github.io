@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% include nav.html %}
+<main class="page page--post">
+  <article class="post">
+    <header>
+      <p class="post__category" aria-label="post category">
+        <span>{{ page.category }}</span>
+        <time aria-label="Date published" class="post__pubdate" datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%b-%d-%Y" }}</time>
+      </p>
+      <h1 class="post__title">{% include title.html title=page.title %}</h1>
+      {% if page.description %}
+      <h2 class="post__subtitle">{% include title.html title=page.description %}</h2>
+      {% endif %}
+    </header>
+
+    <section>
+      {{ content }}
+    </section>
+
+  </article>
+</main>
+{% include footer.html %}
