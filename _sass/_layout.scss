@@ -8,7 +8,8 @@
 
     p {
       font-size: 5rem;
-      font-weight: 500;
+      font-size: clamp(3rem, 10vw, 5rem);
+      font-weight: normal;
       line-height: 1.25;
       text-indent: 0;
       margin: 3rem auto;
@@ -42,6 +43,7 @@
       ul, p {
         font-family: var(--sans);
         margin: auto;
+        padding: 0 2rem;
       }
 
       * + * {
@@ -49,17 +51,19 @@
       }
 
       p {
-        width: 60ch;
+        max-width: 60ch;
       }
 
       ul {
-        width: 55ch;
+        max-width: 50ch;
       }
     }
 
     &.page__section--footer {
       min-height: auto;
+      max-height: 75vh;
       padding-bottom: 8rem;
+      overflow: hidden;
     }
 
     & > header {
@@ -68,11 +72,17 @@
       align-items: center;
       width: 90%;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
       h2 {
         flex: 1;
         text-transform: uppercase;
         font-size: 2rem;
+      }
+
+      .btn {
+        justify-self: end;
       }
     }
 
@@ -84,6 +94,63 @@
 
       .card:first-child {
         border-right: 1px solid black;
+      }
+    }
+  }
+
+  &.page--blog {
+    .page__section:first-child {
+      border: none;
+    }
+
+    .posts-grid {
+      display: grid;
+      margin: 0 5vw;
+      border-bottom: 1px solid black;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media screen and (max-width: 850px) {
+        & {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          grid-column: span 1 !important;
+
+          &:nth-child(odd) {
+            border-right: 1px solid black;
+          }
+        }
+      }
+
+      .card {
+        grid-template-rows: auto 1fr auto;
+        padding: 2rem;
+        grid-column: span 2;
+        border-top: 1px solid black;
+
+        header {
+          padding: 0;
+        }
+
+        p {
+          text-indent: 0;
+        }
+
+        &:only-child {
+          border-right: 1px solid black;
+        }
+
+        &:nth-child(2n),
+        &:nth-child(3n) {
+          grid-column: span 1;
+        }
+
+        &:nth-child(2n) { border-left: 1px solid black; }
+
+        &:nth-child(4n) {
+          grid-column: span 2;
+        }
       }
     }
   }
@@ -106,10 +173,14 @@
 }
 
 .card-flex {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
-  .card {
-    flex: 1;
+  @media screen and (max-width: 800px) {
+    .card:first-child {
+      border-right: 0 !important;
+      border-bottom: 1px solid black;
+    }
   }
 }
 
@@ -132,6 +203,7 @@
   }
 
   &.card--cta {
+    padding-top: 2rem;
     grid-template-rows: 1fr auto auto auto;
 
     & > * {
@@ -227,11 +299,15 @@
       text-indent: 0;
     }
   }
+
+  .card__pubdate {
+    font-family: var(--monospace);
+    text-transform: uppercase;
+  }
 }
 
 .page__section {
   position: relative;
-  overflow: hidden;
 
 
   &::before, &::after {
@@ -247,7 +323,7 @@
 
     background-image: linear-gradient(-45deg, var(--f-red), var(--f-yellow));
     top: calc(var(--circle-size) / 4);
-    right: calc(var(--circle-size) / 4 * -1);
+    right: calc(var(--circle-size) / 4);
 
     animation: beforeAnim 10s infinite;
   }
@@ -259,7 +335,7 @@
     top: unset;
     bottom: calc(var(--circle-size) / 7);
     right: unset;
-    left: calc((var(--circle-size) / 7) * -1);
+    left: calc((var(--circle-size) / 7));
   }
 
   &:nth-child(2n) {
@@ -299,6 +375,10 @@
   }
 }
 
+.banner-actions,
+.page .page__section > header {
+  flex-wrap: wrap;
+}
 
 @keyframes beforeAnim{
   0% {
@@ -318,5 +398,19 @@
   }
   100% {
     transform:  translate(0px,0px)  ;
+  }
+}
+
+.page-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    background-image: linear-gradient(#fff3, #fff3);
   }
 }
