@@ -22,7 +22,7 @@ redirect_from:
           {{ post.description }}
         </p>
         <footer>
-          <time class="card__pubdate" datetime="{{ post.date | date: "%F" }}">{{ post.date | date: "%b-%d-%Y" }}</time>
+          <time aria-label="Date published" class="card__pubdate" datetime="{{ post.date | date: "%F" }}">{{ post.date | date: "%b-%d-%Y" }}</time>
         </footer>
       </article>
       {% endfor %}

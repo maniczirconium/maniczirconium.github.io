@@ -72,17 +72,17 @@ layout: default
       <a href="/writing/" class="btn">See all</a>
     </header>
     <div class="card-flex">
-
+      {% assign post1 = site.posts[0] %}
       <article class="card">
         <header>
-          <h3 class="card__title"><a href="#!">The importance of mother tongues in learning</a></h3>
-          <h4 class="card__category">Education</h4>
+          <h3 class="card__title"><a href="{{ post1.url }}">{{ post1.title }}</a></h3>
+          <h4 class="card__category">{{ post1.category }}</h4>
         </header>
         <div class="card__body">
-          <p>The language chosen as a medium of learning impacts how a learner takes it in.</p>
+          <p>{{ post1.description }}</p>
         </div>
         <footer>
-          <time class="card__pubdate">JAN-30-2020</time>
+          <time aria-label="Date published" class="card__pubdate" datetime="{{ post1.date | date: "%F" }}">{{ post1.date | date: "%b-%d-%Y" }}</time>
         </footer>
       </article>
 
