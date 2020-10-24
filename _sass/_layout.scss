@@ -288,7 +288,7 @@
         color: inherit;
         background-size: 0;
 
-        &:hover {
+        &[href]:hover {
           text-decoration: underline;
         }
       }

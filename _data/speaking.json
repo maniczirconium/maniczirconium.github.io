@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Looking at a future with JavaScript",
+    "host": {
+      "name": "Developer Student Club AMA Computer College Caloocan",
+      "description": "Developer Student Club AMA Computer College Caloocan is a community of students that focus on improving their skills as well as their professional and personal network in the industry with the use of technology."
+    },
+    "event": {
+      "name": "DSC AMACC Caloocan: Web Development Series",
+      "description": "DSC AMACC Caloocan Web Development Series is here to unleash five episodes to kick-start your Web development journey."
+    },
+    "url": null,
+    "slug": "js-essentials/",
+    "length": "PT1H",
+    "description": "An introductory talk about the basics of JavaScript and its use in web development.",
+    "category": "JavaScript",
+    "date": "2020-10-05",
+    "audience": "students from various schools with beginner to intermediate understanding of JavaScript as a language."
+  }
+]
