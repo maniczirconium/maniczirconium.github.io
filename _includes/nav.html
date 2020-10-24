@@ -1,6 +1,12 @@
+{% assign navHasH1 = include.h1 %}
+
 <div class="header-wraper">
   <header class="main-header">
+    {% if navHasH1 == nil or navHasH1 == true %}
     <h1>Francis Rubio</h1>
+    {% else %}
+    <p class="h1">Francis Rubio</p>
+    {% endif %}
     <p>Web developer. Web designer. Educator.</p>
   </header>
   <nav class="main-nav">

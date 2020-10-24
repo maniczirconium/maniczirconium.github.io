@@ -1,3 +1,14 @@
 ---
-layout: default
+layout: error
+permalink: 404.html
 ---
+{% include nav.html h1=false %}
+
+<main class="page page--404">
+  <h1>This is <span class="highlighted">not the page</span> you are looking for</h1>
+  <section>
+    <p>You have clicked on a dead link. It's probably my fault, and I am fixing it now. In the mean time, you may go back to where you came from, or click one of the links from the navigation bar up top.</p>
+    <p>You can also read up on what I have written about web development on <a href="https://antaresprogramming.github.io/" target="_blank" rel="noopener">Antares Programming</a>. It is in Filipino, and I dedicated it to Filipino students that are having difficulties in getting into web development because of how technical tutorials and documentations are.</p>
+  </section>
+</main>
+{% include footer.html %}
