@@ -56,7 +56,8 @@
         timeIn: new Date(Date.now()).toLocaleString(),
         ref: document.referrer,
         userAgent: navigator.userAgent,
-        platform: navigator.platform
+        platform: navigator.platform,
+        url: window.location.href
       })
   }
   recordVisitorData();
