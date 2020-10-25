@@ -95,6 +95,7 @@ a {
   background-position: bottom center;
   background-size: 100% 2px;
   transition: background-size 300ms ease;
+  box-decoration-break: clone;
 
   &[href]:hover, &[href]:focus {
     background-size: 100% 100%;
