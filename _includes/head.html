@@ -17,6 +17,12 @@
 {% else %}
   {% assign lang = site.lang %}
 {% endif %}
+
+{% if(page.image) %}
+  {% assign image = page.image %}
+{% else %}
+  {% assign image = "/site-image.jpg" %}
+{% endif %}
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -30,9 +36,7 @@
   <meta property="og:description" content="{{ desc }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="{{ lang }}">
-{% if(page.image) %}
-  <meta property="og:image" content="{{ page.image }}">
-{% endif %}
+  <meta property="og:image" content="{{ site.url }}/image{{ page.image }}">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ site.twitter }}">
@@ -40,9 +44,7 @@
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ desc }}">
-{% if(page.image) %}
-  <meta name="twitter:image" content="{{ page.image }}">
-{% endif %}
+  <meta name="twitter:image" content="{{ site.url }}/image{{ page.image }}">
   
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=qAMjdA40ep">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=qAMjdA40ep">
