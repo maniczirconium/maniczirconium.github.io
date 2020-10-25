@@ -5,16 +5,18 @@ permalink: /speaking/
 {% include nav.html h1=false %}
 
 <main class="page page--blog page--speaking">
-  <header class="page__banner">
-    <h1>Speaking</h1>
-    <p>I occasionally speak at developer conferences. If you are holding a developer conference in your local university, school club, workplace event, or developer conference and are interested in inviting me to speak at your event or hold a workshop, you can reach out to me at <a href="mailto:devFrancisRubio@gmail.com" target="_blank" rel="noopener">devFrancisRubio@gmail.com</a>.</p>
-  </header>
+  <section class="page__section" style="min-height: auto;">
+    <header>
+      <h1>Speaking</h1>
+      <p>I occasionally speak at developer conferences. If you are holding a developer conference in your local university, school club, workplace event, or developer conference and are interested in inviting me to speak at your event or hold a workshop, you can reach out to me at <a href="mailto:devFrancisRubio@gmail.com" target="_blank" rel="noopener">devFrancisRubio@gmail.com</a>.</p>
+    </header>
+  </section>
 
   {% assign min = 50 %}
   {% assign max = 75 %}
   {% assign diff = max | minus: min %}
   {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
-  <section class="page__section" style="--circle-size: {{ randomNumber }}vw">
+  <section class="page__section" style="overflow: hidden; --circle-size: {{ randomNumber }}vw;">
     <header>
       <h2>Past events</h2>
     </header>

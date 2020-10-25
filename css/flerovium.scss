@@ -11,6 +11,7 @@
 
 // Components
 @import "components/button";
+@import "components/input-group";
 @import "posts";
 @import "speaking";
 @import "mobile-layout";
@@ -119,4 +120,16 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 [type='radio'] {
   box-sizing: border-box;
   padding: 0;
+}
+
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
 }

@@ -21,6 +21,7 @@
       padding: 2rem 0;
     }
   }
+  
   .page__section {
     display: grid;
     grid-template-rows: 30vh 1fr;
@@ -128,6 +129,12 @@
         padding: 2rem;
         grid-column: span 2;
         border-top: 1px solid black;
+
+        img {
+          width: 50%;
+          max-width: 300px;
+          align-self: end;
+        }
 
         header {
           padding: 0;

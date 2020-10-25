@@ -1,0 +1,41 @@
+---
+layout: default
+type: index
+permalink: /hire-me/
+---
+
+{% include nav.html %}
+<main class="page page-hireme">
+  <header class="page__banner">
+    <p>I am currently actively looking for jobs.</p>
+    <div class="banner-actions">
+      <a href="{{ site.url }}/files/Francis_Rubio-Resume.pdf" download class="btn btn--cta">Download my résumé</a>
+    </div>
+  </header>
+
+  {% assign min = 50 %}
+  {% assign max = 75 %}
+  {% assign diff = max | minus: min %}
+  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <section class="page__section page__section--longform page__section--footer" style="--circle-size: {{ randomNumber }}vw">
+    <header>
+      <h2>Contact</h2>
+    </header>
+    <p>You can reach me on these channels of communication:</p>
+    <ul>
+      <li>
+        <span class="bold">Email:</span>
+        <a href="mailto:devFrancisRubio@gmail.com">devFrancisRubio@gmail.com</a>
+      </li>
+      <li>
+        <span class="bold">Github:</span>
+        <a href="https://github.com/maniczirconum" target="_blank" rel="noopener">maniczirconium</a>
+      </li>
+      <li>
+        <span class="bold">LinkedIn:</span>
+        <a href="www.linkedin.com/in/francis-rubio" target="_blank" rel="noopener">Francis Rubio</a>
+      </li>
+    </ul>
+  </section>
+</main>
+{% include footer.html %}
