@@ -17,6 +17,12 @@
 {% else %}
   {% assign lang = site.lang %}
 {% endif %}
+
+{% if(page.image) %}
+  {% assign image = page.image %}
+{% else %}
+  {% assign image = "/site-image.jpg" %}
+{% endif %}
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -31,7 +37,7 @@
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="{{ lang }}">
 {% if(page.image) %}
-  <meta property="og:image" content="{{ page.image }}">
+  <meta property="og:image" content="{{ site.url }}/image{{ page.image }}">
 {% endif %}
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
