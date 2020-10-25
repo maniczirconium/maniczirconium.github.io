@@ -21,7 +21,29 @@ Throughout the year, I was slowly awakening from the euphoria. I was ready to le
 
 ## The Pandemic
 
-I was ready to leave. But then the COVID-19 pandemic
+The COVID-19 pandemic revealed the actual state of the education system, at least in the institution that I worked for. The pandemic response was very poor. I worked in a private school, which meant that we were in a no-work-no-pay system. We didn't receive compensation to adjust to the pandemic except for the last pay we were supposed to get before the school year ended. I was supposed to leave and look for a new job, but the crisis meant that it would be next to impossible.
 
+And then the 2020-2021 school year came. We started working on the learning modules that we would give out to the students in July, but it wasn't until August that we were paid for anything. Add to that the difficulty of adjustment for teachers that was using the type of technology needed for online classes for the first time. These teachers were barely knowledgeable about office suites in creating documents, slide presentations, and spreadsheets. We could not expect them to know how to use Zoom or Google Meet. Add to that the complexity of a custom learning management system that the school commissioned. It is crap. The design was all over the place, it isn't at all helpful, and until now, no one in the school uses it. It was a complete waste of resources that should have just gone to teachers' pay.
+
+Speaking of pay, this is what opened my eyes&mdash;finally&mdash;to how bad things has gotten for me. In the previous school year, the institution has had three teachers handling the ICT classes: I was handling grades 10, 7, 6, and 5 students, another one was handling grades 8 and 9 students, and the other one handled grades 1 to 4. But this school year, they laid one of us off, and the other one resigned. I was left to handle all students of junior high school and elementary. And this is without a salary raise. I realized what was happening; I was being abused by my employers.
+
+But let's not focus on myself here. After all, I accepted this job to make an impact. That impact is ever more important during this pandemic. While we move for academic freeze, which becomes more and more unlikely as days pass, teachers are the only pillars the students can anchor to. 
+
+## Free education is an illusion
+
+As a teacher, I take pride in the skill of teaching that I have and was trained to have. I take this profession very seriously, and I blame it on only myself when students fail to learn in my class.
+
+Education is a right, and it is supposed to. But having a student go to school does not automatically mean they are getting adequate education. My students, though studying in a private school, are poor. They are only here because of scholarship grants. And that is also the case with other private schools like the institution I am working for. With teachers like me that are overloaded and overworked, how can we expect our students to receive quality education?
+
+Schools that have adequate resources are always better. You will always have passionate teachers, and you can always get them cheap. After all, I am one, and I was employed at a very low cost. But unless you get enough of them and pay them their worth, passion is just that: passion <i lang="tl">lang, walang quality</i>. As much as these educators want to give their whole body, soul, and mind to their beloved learners, they could only go so far. 
+
+It is as if this whole education system is a fraud. Everyone is given the chance to go to school, but only the privileged learn. Unless a student goes to a school that has adequate resources (usually paired with a very expensive tuition fee), they will not benefit from the highest quality of education that is supposed to be available for all. This whole <q>all of you can go to school because this is your right</q> system is a fraud to make people believe that they are getting what they deserve, but in reality, they are getting less than that.
+
+## A call to action
+
+I look forward to a day when teachers are held at a much higher pedestal than where they are today. I look forward to a day when teachers give everything they have and they receive an equal compensation back. I look forward to a day when students of all classes and quality of life receive the same education, that of a higher standard and quality. I look forward to a day when teachers are only allowed to handle a few classes so they can hone their craft and not be overworked.
+
+I plan to leave teaching this year. But I just know that I'm gonna be back. I live for the impact I leave in my place in the world. And as much as I would love to become a hero, heroes are gunned down with their faces on the ground only for their faces to be printed on bills and engraved on coins in honor. And yet the ideals and principles they fought for still remain ignored. 
 
 *[COVID-19]: Coronavirus Disease 2019
+*[ICT]: Information and Communications Technology

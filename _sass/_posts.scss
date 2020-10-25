@@ -94,5 +94,21 @@
         }
       }
     }
+
+    footer {
+      border-top: 1px solid;
+      padding: 2em;
+      
+      h2, h3, h4, h5, h6 {
+        max-width: 50ch;
+        margin: auto;
+        font-family: var(--sans);
+      }
+
+      .input-group {
+        width: 100%;
+        max-width: 60ch;
+      }
+    }
   }
 }
