@@ -24,8 +24,9 @@ layout: default
       <h2>Share this article</h2>
       <label for="permalink" class="visually-hidden">Permalink</label>
       <div class="input-group">
-        <input type="url" readonly value="{{ site.url }}{{ page.url}}">
-        <button class="btn btn--cta">Copy Link</button>
+        <input type="url" id="permalink" name="permalink" readonly value="{{ site.url }}{{ page.url}}" class="js-link-to-copy">
+        <button class="btn btn--cta js-copy-link">Copy Link</button>
+        <label for="permalink" class="input-info js-input-info">Link copied!</label>
       </div>
     </footer>
   </article>

@@ -1,0 +1,22 @@
+<script>
+  /* HIGHLIGHT ANIMATION */
+  const highlights = document.querySelectorAll('.highlighted') 
+  highlights.forEach(word => word.classList.add('with-color'))
+</script>
+<script>
+  /* COPY TO CLIPBOARD */
+  const btnCopyToClipboard = document.querySelector('.js-copy-link'),
+        txtLinkToCopy      = document.querySelector('.js-link-to-copy'),
+        lblInputInfo       = document.querySelector('.js-input-info')
+
+  if(btnCopyToClipboard != null) {
+    btnCopyToClipboard.addEventListener('click', evt => {
+      txtLinkToCopy.select()
+      txtLinkToCopy.setSelectionRange(0, 99999) // for mobile devices
+      document.execCommand('copy')
+
+      lblInputInfo.classList.add('shown')
+      setTimeout(() => lblInputInfo.classList.remove('shown'), 2000)
+    })
+  }
+</script>
