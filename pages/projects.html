@@ -18,7 +18,7 @@ permalink: /projects/
       <article class="card card--talk">
         <img src="{{ site.url }}{{ post.img.path }}" alt="{{ post.img.alt }}" width="1080" height="1080">
         <header>
-          <h3 class="card__title" id="{{ post.name | slugify }}"><a {% if post.url != nil %} href="{{ post.url }}" {% endif %}>{{ post.name }}</a></h3>
+          <h3 class="card__title"><a id="{{ post.name | slugify }}" {% if post.url != nil %} href="{{ post.url }}" {% endif %}>{{ post.name }}</a></h3>
           <h4 class="card__category">{{ post.category }}</h4>
           {% if post.url != nil %}
           <a href="{{ post.url }}" class="talk-url">{{ post.url }}</a>

@@ -24,7 +24,7 @@ permalink: /speaking/
       {% for post in site.data.speaking %}
       <article class="card card--talk">
         <header>
-          <h3 class="card__title"><a {% if post.url != nil %} href="{{ post.url }}" {% endif %}>{{ post.title }}</a></h3>
+          <h3 class="card__title"><a id="{{ post.title | slugify }}" {% if post.url != nil %} href="{{ post.url }}" {% endif %}>{{ post.title }}</a></h3>
           <h4 class="card__category">{{ post.category }}</h4>
           <time aria-label="Length of talk" class="talk-length" datetime="{{ post.length }}">{{ post.length | date: "Around %-H hour" }}</time>
           {% if post.url != nil %}
