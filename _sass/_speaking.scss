@@ -106,6 +106,10 @@
             list-style: none;
             font-weight: bold;
 
+            &::-webkit-details-marker {
+              display: none;
+            }
+
             & + * {
               margin-top: 2em;
             }
