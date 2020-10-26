@@ -103,14 +103,8 @@
           summary {
             padding: 1rem;
             cursor: pointer;
-            display: flex;
+            list-style: none;
             font-weight: bold;
-
-            &::after {
-              content: '▶';
-              margin-left: auto;
-              transition: transform 300ms;
-            }
 
             & + * {
               margin-top: 2em;
