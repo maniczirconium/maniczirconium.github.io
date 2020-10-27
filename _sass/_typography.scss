@@ -108,3 +108,27 @@ a {
     outline: none;
   }
 }
+
+pre {
+  padding-left: 0;
+  max-width: 60ch;
+  margin: auto;
+
+  code {
+    display: block;
+    padding: 1em;
+    margin: 1em;
+    border: 2px dotted;
+    overflow: auto;
+    scrollbar-color: #000a #0003;
+    white-space: pre;
+  }
+}
+
+.footnotes {
+  margin-top: 2em;
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-size: 25% 1px;
+  padding: 1em;
+}
