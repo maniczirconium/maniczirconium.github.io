@@ -32,3 +32,19 @@
     }
   }
 }
+
+.page-footer {
+  .btn {
+    color: var(--bg-color);
+    border: 3px solid var(--bg-color);
+
+    &.btn--cta {
+      background-color: var(--bg-color);
+      color: var(--fg-color);
+
+      &:hover {
+        background-color: #fffc;
+      }
+    }
+  }
+}
