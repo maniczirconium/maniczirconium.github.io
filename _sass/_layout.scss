@@ -423,6 +423,15 @@
   background-color: #000;
   color: #fff;
   padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  & > * {
+    flex-grow: 1;
+    flex-basis: 300px;
+    flex-shrink: 0;
+  }
 
   p {
     margin: 0;
@@ -430,5 +439,34 @@
 
   a {
     background-image: linear-gradient(#fff3, #fff3);
+  }
+
+  nav {
+    padding: 1em;
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-left: auto;
+      width: fit-content;
+      width: -moz-fit-content;
+      gap: 0.25em;
+
+      a {
+        display: block;
+        
+        &.btn {
+          padding: 0.5em;
+        }
+      }
+    }
   }
 }
