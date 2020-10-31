@@ -51,16 +51,19 @@ h2 {
 
 blockquote {
   position: relative;
-  padding: 1em;
+  padding: 1em ;
   margin: calc(1em + 15px) auto;
   max-width: 55ch;
-  font-family: var(--monospace);
-  font-size: 2rem;
   text-align: center;
   border: 1px solid black;
   box-shadow: 15px 15px 0 black;
   margin-bottom: calc(1em + 15px);
   
+  &, p {
+    font-family: var(--monospace) !important;
+    font-size: 2rem !important;
+  }
+
   p {
     margin: 0;
     
@@ -84,6 +87,14 @@ blockquote {
     padding: 1em 1.25em;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  cite {
+    display: block;
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-style: normal;
+    margin-top: 2rem;
   }
 }
 
