@@ -113,10 +113,8 @@ a {
   }
 
   &[href]:focus {
-    box-shadow:
-      0 0 0 3px var(--bg-color),
-      0 0 0 6px var(--fg-color);
-    outline: none;
+    outline: 3px solid;
+    outline-offset: 3px;
   }
 }
 
