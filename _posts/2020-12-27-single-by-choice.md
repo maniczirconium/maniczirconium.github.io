@@ -1,7 +1,7 @@
 ---
 title: Single by choice
 description: In a world where being married is seen as the ultimate goal, living single is a struggle
-image: /posts/income-versus-outcome/cover.png
+image: /posts/single-by-choice/cover.jpg
 author: teacherbuknoy
 category: life
 ---
