@@ -1,11 +1,9 @@
 ---
-layout: post
 title: Single by choice
-date: 2020-12-27 14:27
-category: 
+description: In a world where being married is seen as the ultimate goal, living single is a struggle
+image: /posts/income-versus-outcome/cover.png
 author: teacherbuknoy
-tags: [life]
-summary: In a world where being married is seen as the ultimate goal, living single is a struggle
+category: life
 ---
 
 Since I entered my adolescent years, I have always believed that I was more than my penis or my ability to procreate. I am above marriage, and I am destined to be bigger than being just a father of three and a husband. And for years, I have lived by that principle. Whenever people ask me why I have never been in a relationship, my answer's simple: I'm just not interested.

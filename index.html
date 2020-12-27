@@ -72,13 +72,18 @@ layout: default
     </header>
     <div class="card-flex">
       {% assign post1 = site.posts[0] %}
+      {% if post1.description != null %}
+        {% assign description = post1.description %}
+      {% else %}
+        {% assign description = post1.summary %}
+      {% endif %}
       <article class="card">
         <header>
           <h3 class="card__title"><a href="{{ post1.url }}">{{ post1.title }}</a></h3>
           <h4 class="card__category">{{ post1.category }}</h4>
         </header>
         <div class="card__body">
-          <p>{{ post1.description }}</p>
+          <p>{{ description }}</p>
         </div>
         <footer>
           <time aria-label="Date published" class="card__pubdate" datetime="{{ post1.date | date: "%F" }}">{{ post1.date | date: "%b-%d-%Y" }}</time>
@@ -86,13 +91,18 @@ layout: default
       </article>
 
       {% assign post1 = site.posts[1] %}
+      {% if post1.description != null %}
+        {% assign description = post1.description %}
+      {% else %}
+        {% assign description = post1.summary %}
+      {% endif %}
       <article class="card">
         <header>
           <h3 class="card__title"><a href="{{ post1.url }}">{{ post1.title }}</a></h3>
           <h4 class="card__category">{{ post1.category }}</h4>
         </header>
         <div class="card__body">
-          <p>{{ post1.description }}</p>
+          <p>{{ description }}</p>
         </div>
         <footer>
           <time aria-label="Date published" class="card__pubdate" datetime="{{ post1.date | date: "%F" }}">{{ post1.date | date: "%b-%d-%Y" }}</time>
