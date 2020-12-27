@@ -2,6 +2,12 @@
 layout: default
 ---
 
+{% if page.description != null %}
+  {% assign description = page.description %}
+{% else %}
+  {% assign description = page.summary %}
+{% endif %}
+
 {% include nav.html h1=false %}
 <main class="page page--post">
   <article class="post">
@@ -11,8 +17,8 @@ layout: default
         <time aria-label="Date published" class="post__pubdate" datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%b-%d-%Y" }}</time>
       </p>
       <h1 class="post__title">{% include title.html title=page.title %}</h1>
-      {% if page.description %}
-      <h2 class="post__subtitle">{% include title.html title=page.description %}</h2>
+      {% if description %}
+      <h2 class="post__subtitle">{% include title.html title=description %}</h2>
       {% endif %}
     </header>
 
