@@ -1,0 +1,34 @@
+---
+layout: default
+permalink: /page/
+---
+
+{% include nav.html h1=false %}
+<main class="page page--blog page--speaking">
+	<section class="page__section">
+		<header>
+			<h1>Special Pages</h1>
+			<p>These are special pages in this website.</p>
+		</header>
+		<div class="posts-grid">
+			<article class="card card--talk">
+				<header>
+					<h3 class="card__title">
+						<a href="/page/internet-safety/">Internet Safety</a>
+					</h3>
+					<h4 class="card__category">Resources</h4>
+				</header>
+				<p>Useful links to help you protect yourself online.</p>
+				<footer>
+					<time
+						aria-label="Date published"
+						class="card__pubdate"
+						datetime="2021-02-02"
+						>FEB-02-2021</time
+					>
+				</footer>
+			</article>
+		</div>
+	</section>
+</main>
+{% include footer.html %}
