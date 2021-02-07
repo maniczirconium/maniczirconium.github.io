@@ -1,32 +1,32 @@
-title: "Francis Rubio &middot; Official Website"
-description: "A Web designer, developer, educator, and writer from the Philippines."
+title: 'Francis Rubio &middot; Official Website'
+description: 'A Web designer, developer, educator, and writer from the Philippines.'
 permalink: /blog/:title/
-theme-color: "#FF9500"
+theme-color: '#FF9500'
 gravatar: aeec9ba19ac358be11a053ffcafac8f1
 author: Francis Rubio
 lang: en_US
 
 facebook: teacherbuknoyofficial
-mastodon: 
+mastodon:
 reddit: flr1999
 twitter: teacherbuknoy
 
 authors:
   teacherbuknoy:
     name: Francis Rubio
-    description: "Web Developer and Educator from the Philippines"
+    description: 'Web Developer and Educator from the Philippines'
     gravatar: 2dc37e96621279e556480e63b75b58dc # Gravatar md5 hash
   anonymous:
-    name: "Unknown Author"
+    name: 'Unknown Author'
 
 plugins:
-  # - jekyll-feed
+  - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
 
 paginate: 7
-paginate_path: "/archive/:num/"
+paginate_path: '/archive/:num/'
 
 markdown: kramdown
 kramdown:
