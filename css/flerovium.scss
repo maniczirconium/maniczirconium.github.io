@@ -36,6 +36,7 @@
 */
 html {
 	line-sizing: normal;
+	scroll-behavior: smooth;
 }
 
 /* Remove the tiny space around the edge of the page */
@@ -183,4 +184,24 @@ section {
 	height: 1px !important;
 	width: 1px !important;
 	overflow: hidden;
+}
+
+:target {
+	scroll-margin-top: 15vh;
+	animation: targetAim 1s ease-in-out;
+	animation-delay: 700ms;
+	outline-color: transparent;
+}
+
+@keyframes targetAim {
+	0% {
+		outline: 3px solid var(--f-ponkan);
+		outline-offset: 0;
+	}
+	
+	100% {
+		outline-offset: 5em;
+		// outline-width: 0 solid var(--f-ponkan);
+	}
+
 }
