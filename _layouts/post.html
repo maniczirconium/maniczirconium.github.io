@@ -8,9 +8,15 @@ layout: default
   {% assign description = page.summary %}
 {% endif %}
 
+{% if page.class != null %}
+  {% assign classes = page.class %}
+{% else %}
+  {% assign classes = "" %}
+{% endif %}
+
 {% include nav.html h1=false %}
 <main class="page page--post">
-  <article class="post">
+  <article class="post {{ classes }}">
     <header>
       <p class="post__category" aria-label="post category">
         <span>{{ page.category }}</span>

@@ -1,6 +1,6 @@
 .page--post {
 	margin: 0 5vw;
-	font-size: 1.1em;
+	font-size: 1em;
 
 	.post {
 		.post__category {
@@ -23,6 +23,10 @@
 			time {
 				padding: 0.5em;
 				background-color: var(--bg-color);
+
+				&:empty {
+					display: none;
+				}
 			}
 
 			span {
@@ -195,7 +199,7 @@
 			}
 		}
 
-		& > section > p:first-child::first-letter {
+		&:not(.poetry) > section > p:first-child::first-letter {
 			font-size: 5rem;
 			line-height: 1.5rem;
 			float: left;
@@ -205,6 +209,10 @@
 			margin: 1rem;
 			box-shadow: 10px 10px 0 black;
 			margin-right: calc(1rem + 10px);
+		}
+
+		&.poetry > section > p {
+			text-indent: 0;
 		}
 
 		footer {
