@@ -15,7 +15,7 @@ Sa tanglaw ng mga bituing kumukutitap?
 
 Sa landas mo ako itong munting gabay<br>
 Sasagip sa iyo sa madilim na lambak ng makapal na karimlan<br>
-At sa muli nitong pagskat ay mamamahinga<br>
+At sa muli nitong pagsikat ay mamamahinga<br>
 Nang huwag nang maging saksi sa inyong muling pagkikita
 
 Dahil kahit paglahuin ng araw ang bituin kung umaga<br>
@@ -25,7 +25,7 @@ Pagsapit ng gabi na ako namang muli ang iyong kasintahan
 
 Husto na ang daupang-palad na salawahan<br>
 Sapat na ang hiram na panahong nasa dilim ang kaganapan<br>
-Dahil kahit ako;y bituing dakila't marilag<br>
+Dahil kahit ako'y bituing dakila't marilag<br>
 Sikat ko sa iyo'y isa lang kutitap na walang pangalan
 
 <hr>
