@@ -1,7 +1,7 @@
 ---
 title: May Bagong Trabaho si Mr. Go
 description: Isang orihinal na akda ni Francis Rubio
-image: /posts/may-bagong-trabaho-si-mr-go/cover.png
+image: /posts/may-bagong-trabaho-si-mr-go/seo-cover.png
 author: teacherbuknoy
 category: literature
 language: fil
