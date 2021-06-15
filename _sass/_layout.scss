@@ -69,6 +69,10 @@
       overflow: hidden;
     }
 
+    &.page__section--post .card__title {
+      font-family: 'Rozha One', serif;
+    }
+
     & > header {
       padding: 2rem 0;
       display: flex;
