@@ -3,6 +3,7 @@
 	font-size: 1em;
 
 	.post {
+
 		.post__category {
 			text-transform: uppercase;
 			letter-spacing: 1px;
@@ -41,6 +42,7 @@
 			font-size: clamp(3rem, 10vw, 5rem);
 			margin: 0;
 			padding: 1em 0;
+			font-family: var(--display);
 		}
 
 		.post__subtitle {
@@ -119,7 +121,7 @@
 				margin-left: auto;
 				font-family: var(--font-family);
 				font-size: 1em;
-				line-height: 1.5;
+				// line-height: 1.5;
 
 				&:first-child {
 					text-indent: 0;

@@ -1,64 +1,82 @@
-{% if(page.title) %}
-  {% assign title = page.title %}
-{% else %}
-  {% assign title = site.title %}
-{% endif %}
-
-{% if(page.description) %}
-  {% assign desc = page.description %}
-{% elsif(page.summary) %}
-  {% assign desc = page.summary %}
-{% else %}
-  {% assign desc = site.description %}
-{% endif %}
-
-{% if(page.lang) %}
-  {% assign lang = page.lang %}
-{% else %}
-  {% assign lang = site.lang %}
-{% endif %}
-
-{% if(page.image) %}
-  {% assign image = page.image %}
-{% else %}
-  {% assign image = "/site-image.jpg" %}
-{% endif %}
+{% if(page.title) %} {% assign title = page.title %} {% else %} {% assign title
+= site.title %} {% endif %} {% if(page.description) %} {% assign desc =
+page.description %} {% elsif(page.summary) %} {% assign desc = page.summary %}
+{% else %} {% assign desc = site.description %} {% endif %} {% if(page.lang) %}
+{% assign lang = page.lang %} {% else %} {% assign lang = site.lang %} {% endif
+%} {% if(page.image) %} {% assign image = page.image %} {% else %} {% assign
+image = "/site-image.jpg" %} {% endif %}
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ desc }}">
-  
-  <!-- Facebook Card -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ desc }}">
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:locale" content="{{ lang }}">
-  <meta property="og:image" content="{{ site.url }}/images{{ image }}">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">                            
-  <meta name="twitter:site" content="@{{ site.twitter }}">
-  <meta name="twitter:creator" content="@{{ site.twitter }}">
-  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ desc }}">
-  <meta name="twitter:image" content="{{ site.url }}/images{{ image }}">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=qAMjdA40ep">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=qAMjdA40ep">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=qAMjdA40ep">
-  <link rel="manifest" href="/site.webmanifest?v=qAMjdA40ep">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=qAMjdA40ep" color="#333333">
-  <link rel="shortcut icon" href="/favicon.ico?v=qAMjdA40ep">
-  <meta name="msapplication-TileColor" content="#00aba9">
-  <meta name="theme-color" content="#ffffff">
+	<meta charset="UTF-8" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, viewport-fit=cover"
+	/>
+	<title>{{ title }}</title>
+	<meta name="description" content="{{ desc }}" />
 
-  <link rel="alternate" type="application/rss+xml" title="Subscribe to What's New" href="{{ site.url }}/feed.xml" />
+	<!-- Facebook Card -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:title" content="{{ title }}" />
+	<meta property="og:description" content="{{ desc }}" />
+	<meta property="og:site_name" content="{{ site.title }}" />
+	<meta property="og:locale" content="{{ lang }}" />
+	<meta property="og:image" content="{{ site.url }}/images{{ image }}" />
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@{{ site.twitter }}" />
+	<meta name="twitter:creator" content="@{{ site.twitter }}" />
+	<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+	<meta name="twitter:title" content="{{ title }}" />
+	<meta name="twitter:description" content="{{ desc }}" />
+	<meta name="twitter:image" content="{{ site.url }}/images{{ image }}" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="{{ site.url }}/css/flerovium.css">
+	<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="/apple-touch-icon.png?v=qAMjdA40ep"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="32x32"
+		href="/favicon-32x32.png?v=qAMjdA40ep"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="16x16"
+		href="/favicon-16x16.png?v=qAMjdA40ep"
+	/>
+	<link rel="manifest" href="/site.webmanifest?v=qAMjdA40ep" />
+	<link
+		rel="mask-icon"
+		href="/safari-pinned-tab.svg?v=qAMjdA40ep"
+		color="#333333"
+	/>
+	<link rel="shortcut icon" href="/favicon.ico?v=qAMjdA40ep" />
+	<meta name="msapplication-TileColor" content="#00aba9" />
+	<meta name="theme-color" content="#ffffff" />
+
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title="Subscribe to What's New"
+		href="{{ site.url }}/feed.xml"
+	/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet"
+	/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+		rel="stylesheet"
+	/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="{{ site.url }}/css/flerovium.css" />
 </head>

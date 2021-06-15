@@ -2,10 +2,11 @@
 
 :root {
 	--sans: 'Inter', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-	--serif: 'IBM Plex Serif', serif;
+	--serif: 'Newsreader', 'IBM Plex Serif', serif;
 	--monospace: 'DM Mono', 'Consolas', monospace;
+	--display: 'Rozha One', serif;
 
-	--body-copy: var(--sans);
+	--body-copy: var(--serif);
 }
 
 body {
