@@ -185,3 +185,13 @@ pre {
 		max-width: none !important;
 	}
 }
+
+.posts-grid .card.card--post .card__title {
+	font-weight: revert;
+	font-size: 2rem;
+}
+
+.posts-grid .card footer {
+	margin: -2em;
+	margin-bottom: revert;
+}
