@@ -1,0 +1,32 @@
+.toggletip {
+	text-decoration: underline dashed var(--f-ponkan);
+	position: relative;
+	cursor: help;
+}
+
+.tooltip {
+	position: absolute;
+	font-family: var(--sans);
+	background-color: var(--fg-color);
+	text-indent: initial;
+	width: max-content;
+	max-width: 30ch;
+	padding: 0.5em;
+	color: var(--bg-color);
+	border-radius: 0.25em;
+	box-shadow: 0 3px 3px #0003;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: transform 300ms, opacity 300ms;
+	will-change: transform, opacity;
+	font-size: smaller;
+	transform: translateX(-1ch);
+	transition-delay: 300ms;
+}
+
+.toggletip:hover .tooltip {
+	opacity: 1;
+	transform: translateY(-120%) translateX(-1ch);
+}
