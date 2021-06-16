@@ -34,7 +34,14 @@ redirect_from:
         </footer>
       </article>
       {% endfor %}
-      <article class="card card--post"></article>
+
+      {% assign postCount = site.posts.size %}
+      {% assign remainder = postCount | modulo: 3 %}
+      {% assign postFiller = 3 | minus: remainder %}
+      {% for i in (1..postFiller) %}
+      <div class="card card--post"></div>
+      {% endfor %}
+
     </div>
   </section>
   <section class="page__banner">

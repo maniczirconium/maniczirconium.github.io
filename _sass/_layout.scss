@@ -114,7 +114,6 @@
 			display: grid;
 			padding: 0 5vw;
 			margin: 0 auto;
-      max-width: 100ch;
 			border-bottom: 1px solid black;
 			grid-template-columns: repeat(3, 1fr);
 
@@ -128,6 +127,7 @@
 
 					&:nth-child(odd) {
 						border-right: 1px solid black;
+						border-left: none;
 					}
 				}
 			}
@@ -135,8 +135,8 @@
 			.card {
 				grid-template-rows: auto 1fr auto;
 				padding: 2rem;
-				grid-column: span 3;
 				border-top: 1px solid black;
+				border-left: 1px solid black;
 
 				img {
 					width: 50%;
@@ -152,26 +152,10 @@
 					text-indent: 0;
 				}
 
+				&:nth-child(3n),
 				&:only-child {
 					border-right: 1px solid black;
 				}
-
-				/* &:nth-child(2n),
-        &:nth-child(3n) {
-          grid-column: span 1;
-        } */
-
-				&:nth-child(2n) {
-					border-left: 1px solid black;
-				}
-
-				&:nth-child(odd) {
-					border-right: 1px solid black;
-				}
-
-				/* &:nth-child(4n) {
-          grid-column: span 2;
-        } */
 			}
 		}
 	}
