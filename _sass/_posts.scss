@@ -3,7 +3,6 @@
 	font-size: 1em;
 
 	.post {
-
 		.post__category {
 			text-transform: uppercase;
 			letter-spacing: 1px;
@@ -202,15 +201,15 @@
 		}
 
 		&:not(.poetry) > section > p:first-child::first-letter {
-			font-size: 5rem;
+			font-size: 2rem;
 			line-height: 1.5rem;
 			float: left;
 			padding: 1rem;
 			font-weight: bold;
 			border: 1px solid;
-			margin: 1rem;
-			box-shadow: 10px 10px 0 black;
-			margin-right: calc(1rem + 10px);
+			margin: 0;
+			box-shadow: 5px 5px 0 black;
+			margin-right: 0.5rem;
 		}
 
 		&.poetry > section > p {
