@@ -152,9 +152,14 @@
 					text-indent: 0;
 				}
 
-				&:nth-child(3n),
 				&:only-child {
 					border-right: 1px solid black;
+				}
+
+				@media screen and (min-width: 851px) {
+					&:nth-child(3n) {
+						border-right: 1px solid black;
+					}
 				}
 			}
 		}
