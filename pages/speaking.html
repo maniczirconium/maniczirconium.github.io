@@ -2,70 +2,89 @@
 layout: default
 permalink: /speaking/
 ---
+
 {% include nav.html h1=false %}
 
 <main class="page page--blog page--speaking">
-  <section class="page__section" style="min-height: auto;">
-    <header>
-      <h1>Speaking</h1>
-      <p>I occasionally speak at developer conferences. If you are holding a developer conference in your local university, school club, workplace event, or developer conference and are interested in inviting me to speak at your event or hold a workshop, you can reach out to me at <a href="mailto:devFrancisRubio@gmail.com" target="_blank" rel="noopener">devFrancisRubio@gmail.com</a>.</p>
-    </header>
-  </section>
+	<section class="page__section" style="min-height: auto">
+		<header>
+			<h1>Speaking</h1>
+			<p>
+				I occasionally speak at developer conferences. If you are holding a
+				developer conference in your local university, school club, workplace
+				event, or developer conference and are interested in inviting me to
+				speak at your event or hold a workshop, you can reach out to me at
+				<a
+					href="mailto:devFrancisRubio@gmail.com"
+					target="_blank"
+					rel="noopener"
+					>devFrancisRubio@gmail.com</a
+				>.
+			</p>
+		</header>
+	</section>
 
-  {% assign min = 50 %}
-  {% assign max = 75 %}
-  {% assign diff = max | minus: min %}
-  {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
-  <section class="page__section" style="overflow: hidden; --circle-size: {{ randomNumber }}vw;">
-    <header>
-      <h2>Past events</h2>
-    </header>
-    <div class="posts-grid">
-      {% for post in site.data.speaking %}
-      <article class="card card--talk">
-        <header>
-          <h3 class="card__title"><a id="{{ post.title | slugify }}" {% if post.url != nil %} href="{{ post.url }}" {% endif %}>{{ post.title }}</a></h3>
-          <h4 class="card__category">{{ post.category }}</h4>
-          <time aria-label="Length of talk" class="talk-length" datetime="{{ post.length }}">{{ post.length | date: "Around %-H hour" }}</time>
-          {% if post.url != nil %}
-          <a href="{{ post.url }}" class="talk-url">{{ post.url }}</a>
-          {% endif %}
-        </header>
-        <p>
-          {{ post.description }}
-        </p>
-        <dl class="data">
-          {% if post.host != nil %}
-          <dt class="key">Host</dt>
-          <dd class="value-name">{{ post.host.name }}</dd>
+	{% assign min = 50 %} {% assign max = 75 %} {% assign diff = max | minus: min
+	%} {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+	<section
+		class="page__section"
+		style="overflow: hidden; --circle-size: {{ randomNumber }}vw;"
+	>
+		<header>
+			<h2>Past events</h2>
+		</header>
+		<div class="posts-grid">
+			{% for post in site.data.speaking %}
+			<article class="card card--talk">
+				<header>
+					<h3 class="card__title">
+						<a id="{{ post.title | slugify }}">{{ post.title }}</a>
+					</h3>
+					<h4 class="card__category">{{ post.category }}</h4>
+					<span>
+						<time
+							aria-label="Length of talk"
+							class="talk-length"
+							datetime="{{ post.length }}"
+							>{{ post.length | date: "Around %-H hour(s)" }}</time
+						>
+						{% if post.url != nil %}
+            &middot;
+						<a href="{{ post.url }}" class="talk-url">Watch on {{ post.videoHost }}</a>
+						{% endif %}
+					</span>
+				</header>
+				<p>{{ post.description }}</p>
+				<dl class="data">
+					{% if post.host != nil %}
+					<dt class="key">Host</dt>
+					<dd class="value-name">{{ post.host.name }}</dd>
 
-          {% if post.host.description != nil %}
-          <dd class="value-description">{{ post.host.description }}</dd>
-          {% endif %}
+					{% if post.host.description != nil %}
+					<dd class="value-description">{{ post.host.description }}</dd>
+					{% endif %} {% endif %} {% if post.event != nil %}
+					<dt class="key">Event</dt>
+					<dd class="value-name">{{ post.event.name }}</dd>
 
-          {% endif %}
-
-          {% if post.event != nil %}
-          <dt class="key">Event</dt>
-          <dd class="value-name">{{ post.event.name }}</dd>
-
-          {% if post.event.description != nil %}
-          <dd class="value-description">{{ post.event.description }}</dd>
-          {% endif %}
-          {% endif %}
-
-          {% if post.audience != nil %}
-          <dt class="key">Audience</dt>
-          <dd class="value-description">{{ post.audience }}</dd>
-          {% endif %}
-        </dl>
-        <footer>
-          <time aria-label="Date published" class="card__pubdate" datetime="{{ post.date | date: '%F' }}">{{ post.date | date: "%b-%d-%Y" }}</time>
-        </footer>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
+					{% if post.event.description != nil %}
+					<dd class="value-description">{{ post.event.description }}</dd>
+					{% endif %} {% endif %} {% if post.audience != nil %}
+					<dt class="key">Audience</dt>
+					<dd class="value-description">{{ post.audience }}</dd>
+					{% endif %}
+				</dl>
+				<footer>
+					<time
+						aria-label="Date published"
+						class="card__pubdate"
+						datetime="{{ post.date | date: '%F' }}"
+						>{{ post.date | date: "%b-%d-%Y" }}</time
+					>
+				</footer>
+			</article>
+			{% endfor %}
+		</div>
+	</section>
 </main>
 
 {% include footer.html %}

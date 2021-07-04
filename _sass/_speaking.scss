@@ -26,6 +26,7 @@
       grid-column: span 1 !important;
 
       &:nth-child(odd) {
+        border-left: none;
         border-right: 1px solid black;
       }
 
