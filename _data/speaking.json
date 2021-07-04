@@ -1,20 +1,39 @@
 [
-  {
-    "title": "Looking at a future with JavaScript",
-    "host": {
-      "name": "Developer Student Club AMA Computer College Caloocan",
-      "description": "Developer Student Club AMA Computer College Caloocan is a community of students that focus on improving their skills as well as their professional and personal network in the industry with the use of technology."
-    },
-    "event": {
-      "name": "DSC AMACC Caloocan: Web Development Series",
-      "description": "DSC AMACC Caloocan Web Development Series is here to unleash five episodes to kick-start your Web development journey."
-    },
-    "url": null,
-    "slug": "js-essentials/",
-    "length": "PT1H",
-    "description": "An introductory talk about the basics of JavaScript and its use in web development.",
-    "category": "JavaScript",
-    "date": "2020-10-05",
-    "audience": "students from various schools with beginner to intermediate understanding of JavaScript as a language."
-  }
+	{
+		"title": "Looking at a future with JavaScript",
+		"host": {
+			"name": "Developer Student Club AMA Computer College Caloocan",
+			"description": "Developer Student Club AMA Computer College Caloocan is a community of students that focus on improving their skills as well as their professional and personal network in the industry with the use of technology."
+		},
+		"event": {
+			"name": "DSC AMACC Caloocan: Web Development Series",
+			"description": "DSC AMACC Caloocan Web Development Series is here to unleash five episodes to kick-start your Web development journey."
+		},
+		"url": null,
+		"slug": "js-essentials/",
+		"length": "PT1H",
+		"description": "An introductory talk about the basics of JavaScript and its use in web development.",
+		"category": "JavaScript",
+		"date": "2020-10-05",
+		"audience": "Students from various schools with beginner to intermediate understanding of JavaScript as a language."
+	},
+	{
+		"title": "Advanced graphic design on the Web with CSS",
+		"host": {
+			"name": "PUP Parañaque - BSIT 4-1",
+			"description": "BS Information Technology students from PUP Parañaque"
+		},
+		"event": {
+			"name": "Webinar about Emerging Trends in IT",
+			"description": "Information Technology related webinars"
+		},
+		"url": "https://web.facebook.com/puppq.bsit41/videos/1917267615089268/",
+		"videoHost": "Facebook Live",
+		"slug": "advanced-graphic-design-css/",
+		"length": "PT2H",
+		"description": "Because of the popularity of responsive web design, most developers built websites that favor responsiveness and sacrificed graphic design and artistic direction. In this talk, we discussed how you can use modern CSS to create artistic designs in websites while keeping them responsive.",
+		"category": "CSS",
+		"date": "2021-07-03",
+		"audience": "Students of computer courses from various universities and colleges"
+	}
 ]

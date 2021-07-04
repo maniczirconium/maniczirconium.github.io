@@ -12,7 +12,7 @@ I started Antares Programming in late 2018 as a Facebook page where I advertise 
 
 ## The development stack
 
-The website hastwo gone through several iterations. The [original site](https://celestialcinnamon.github.io/antares-blog/), still running until now, ran on [Github Pages](https://github.io/). It used [Hexo](https://hexo.io/) for its backend. I originally chose it because, at the time, it was the technology easiest for me to learn. I stuck with it for a year.
+The website has gone through several iterations. The [original site](https://celestialcinnamon.github.io/antares-blog/), still up until now, ran on [Github Pages](https://github.io/). It used [Hexo](https://hexo.io/) for its backend. I originally chose it because, at the time, it was the technology easiest for me to learn. I stuck with it for a year.
 
 Around third quarter of 2020, during the pandemic, I rebuilt the site from the ground up using [Jekyll](https://jekyllrb.com/). The [new site](https://antaresprogramming.github.io/) has since been running on Jekyll.
 
