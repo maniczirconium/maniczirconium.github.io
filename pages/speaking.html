@@ -21,6 +21,16 @@ permalink: /speaking/
 					>devFrancisRubio@gmail.com</a
 				>.
 			</p>
+			<p>
+				I mostly speak about front end web development, particularly the
+				following:
+			</p>
+			<ul>
+				<li>Accessibility</li>
+				<li>Semantic HTML</li>
+				<li>Advanced CSS</li>
+				<li>Graphic Design on the Web</li>
+			</ul>
 		</header>
 	</section>
 
@@ -48,9 +58,10 @@ permalink: /speaking/
 							datetime="{{ post.length }}"
 							>{{ post.length | date: "Around %-H hour(s)" }}</time
 						>
-						{% if post.url != nil %}
-            &middot;
-						<a href="{{ post.url }}" class="talk-url">Watch on {{ post.videoHost }}</a>
+						{% if post.url != nil %} &middot;
+						<a href="{{ post.url }}" class="talk-url"
+							>Watch on {{ post.videoHost }}</a
+						>
 						{% endif %}
 					</span>
 				</header>
