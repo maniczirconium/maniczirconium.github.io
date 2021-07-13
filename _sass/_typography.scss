@@ -2,7 +2,7 @@
 
 :root {
 	--sans: 'Inter', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-	--serif: 'Newsreader', 'IBM Plex Serif', serif;
+	--serif: 'Lora', 'IBM Plex Serif', serif;
 	--monospace: 'DM Mono', 'Consolas', monospace;
 	--display: 'Rozha One', serif;
 
@@ -62,6 +62,7 @@ h2 {
 blockquote {
 	position: relative;
 	padding: 1em;
+	padding-top: 1.5em;
 	margin: calc(1em + 15px) auto;
 	max-width: 55ch;
 	text-align: center;
@@ -133,6 +134,15 @@ blockquote {
 		text-align: inherit;
 		margin: 1em;
 		padding-left: 4em;
+	}
+
+	&.twitter-tweet {
+		text-align: right;
+
+		p {
+			text-align: left;
+			margin-bottom: 0.5em;
+		}
 	}
 }
 

@@ -45,9 +45,11 @@
 		}
 
 		.post__subtitle {
-			font-weight: normal;
 			color: #000d;
-			font-family: var(--monospace);
+			font-family: var(--sans);
+			line-height: 1.25;
+			font-weight: 300;
+			font-size: 2em;
 		}
 
 		section {
@@ -119,7 +121,6 @@
 				margin-right: auto;
 				margin-left: auto;
 				font-family: var(--font-family);
-				font-size: 1.1em;
 				line-height: 1.5;
 
 				&:first-child {
