@@ -1,18 +1,33 @@
 /*=== COLORS ===*/
 
 :root {
-  /* Theme Colors */
-  --f-red: #F94144;
-  --f-orange: #F3722C;
-  --f-yellow: #F9C74F;
-  --f-ponkan: #F3722C;
-  --f-green: #90BE6D;
-  --f-teal: #43AA8B;
-  --f-indigo: #577590;
+	/* Theme Colors */
+	--f-red: #f94144;
+	--f-orange: #f3722c;
+	--f-yellow: #f9c74f;
+	--f-ponkan: #f3722c;
+	--f-green: #90be6d;
+	--f-teal: #43aa8b;
+	--f-indigo: #577590;
 
-  /* Text Colors */
-  --fg-color: #000;
-  --body-color: #212121;
+	/* Text Colors */
+	--fg-color: #000;
+	--body-color: #212121;
 
-  --bg-color: #fff;
+	--bg-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+	body,
+	img,
+	svg,
+	video,
+	iframe {
+		filter: invert(1);
+		background-color: transparent;
+	}
+
+	body {
+		background-color: #000;
+	}
 }
