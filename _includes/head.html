@@ -1,10 +1,25 @@
-{% if(page.title) %} {% assign title = page.title %} {% else %} {% assign title
-= site.title %} {% endif %} {% if(page.description) %} {% assign desc =
-page.description %} {% elsif(page.summary) %} {% assign desc = page.summary %}
-{% else %} {% assign desc = site.description %} {% endif %} {% if(page.lang) %}
-{% assign lang = page.lang %} {% else %} {% assign lang = site.lang %} {% endif
-%} {% if(page.image) %} {% assign image = page.image %} {% else %} {% assign
-image = "/site-image.jpg" %} {% endif %}
+{% if(page.title) %}
+	{% assign title = page.title | strip_html %}
+{% else %}
+	{% assign title = site.title | strip_html %}
+{% endif %}
+{% if(page.description) %}
+	{% assign desc = page.description | strip_html %}
+{% elsif(page.summary) %}
+	{% assign desc = page.summary | strip_html %}
+{% else %}
+	{% assign desc = site.description | strip_html %}
+{% endif %}
+{% if(page.lang) %}
+	{% assign lang = page.lang | strip_html %}
+{% else %}
+	{% assign lang = site.lang | strip_html %}
+{% endif %}
+{% if(page.image) %}
+	{% assign image = page.image %}
+{% else %}
+	{% assign image = "/site-image.jpg" %}
+{% endif %}
 <head>
 	<meta charset="UTF-8" />
 	<meta
