@@ -1,0 +1,14 @@
+{% assign min = 50 %}
+{% assign max = 75 %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+<div class="page__section" style="--circle-size: {{ randomNumber }}vw">
+  <header>
+    <h2>Companies I worked with</h2>
+  </header>
+  <div class="timeline">
+    <ol>
+      
+    </ol>
+  </div>
+</div>

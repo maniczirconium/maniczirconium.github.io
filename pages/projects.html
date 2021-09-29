@@ -14,25 +14,29 @@ permalink: /projects/
       <h1>Projects</h1>
     </header>
     <div class="posts-grid">
-      {% for post in site.data.projects %}
+      {% assign sortedProjects = site.projects | sort: 'date' | reverse %}
+      {% for post in sortedProjects %}
       <article class="card card--talk">
         <img src="{{ site.url }}{{ post.img.path }}" alt="{{ post.img.alt }}" width="1080" height="1080">
         <header>
-          <h3 class="card__title"><a id="{{ post.name | slugify }}" {% if post.url != nil %} href="{{ post.url }}" {% endif %}>{{ post.name }}</a></h3>
+          <h3 class="card__title"><a id="{{ post.name | slugify }}" {% if post.link != nil %} href="{{ post.link }}" {% endif %}>{{ post.name }}</a></h3>
           <h4 class="card__category">{{ post.category }}</h4>
-          {% if post.url != nil %}
-          <a href="{{ post.url }}" class="talk-url">{{ post.url }}</a>
+          {% if post.link != nil %}
+          <a href="{{ post.link }}" class="talk-url">{{ post.link }}</a>
           {% endif %}
         </header>
         <p>
           {{ post.description }}
         </p>
+        {% assign content = post.content | strip_newlines %}
+        {% if content != "" %}
         <section class="card__details">
           <details>
             <summary class="btn">Details</summary>
-            {{ post.html_desc }}
+            {{ content | markdownify }}
           </details>
         </section>
+        {% endif %}
         <footer>
           <time aria-label="Date published" class="card__pubdate" datetime="{{ post.date | date: '%F' }}">{{ post.date | date: "%b-%d-%Y" }}</time>
         </footer>

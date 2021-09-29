@@ -199,6 +199,10 @@ section {
 	overflow: hidden;
 }
 
+[hidden] {
+	display: none;
+}
+
 :target {
 	scroll-margin-top: 15vh;
 	animation: targetAim 1s ease-in-out;

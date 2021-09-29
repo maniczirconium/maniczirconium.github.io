@@ -1,0 +1,39 @@
+[
+  {
+    "id": "17539396-a17e-487c-b9d5-0ee719f74f37",
+    "name": "Z.Com",
+    "position": "Web developer intern",
+    "url": "https://z.com/",
+    "description": "Development and maintenance of the company's official websites",
+    "date": {
+      "start": ""
+    },
+    "technologies": []
+  },
+  {
+    "id": "5195ac0f-faaa-427f-ab85-61c209fe41e6",
+    "name": "SysNet Integrators Inc.",
+    "position": "Junior Software Developer",
+    "url": "https://sysnetph.com/",
+    "description": "Development and maintenance of new and existing products both internal and for the company's clients.",
+    "technologies": [
+      {
+        "name": "HTML",
+        "image": "html.svg"
+      },
+      {
+        "name": "CSS",
+        "image": "css.svg"
+      },
+      {
+        "name": "JavaScript",
+        "image": "javascript.png"
+      },
+      {
+        "name": "Node.JS",
+        "url": "https://nodejs.org/",
+        "image": "nodejs.svg"
+      }
+    ]
+  }
+]
